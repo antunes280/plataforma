@@ -1,0 +1,67 @@
+body {
+  background-image: url("neon.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.moving-image {
+  animation: moveImage 5s infinite alternate;
+}
+
+@keyframes moveImage {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+.moving-text {
+  animation: moveText 3s infinite alternate;
+  margin-top: -400px; /* Ajuste o valor conforme necessário */
+}
+
+.moving-text-top {
+  margin-top: 100px; /* Ajuste o valor conforme necessário */
+}
+
+@keyframes moveText {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+.center-button {
+  margin-top: 1180px; /* Ajuste o valor conforme necessário */
+}
+
+.large-button {
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.neon-button {
+  background-color: #4200f8;
+  color: #000000;
+  box-shadow: 0 0 5px #00f8cf;
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 20px #f80036;
+}
+
+.neon-button:active {
+  transform: translateY(2px);
+}

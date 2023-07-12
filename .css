@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("imagem\ eletrica.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  font-size: 4vw;
+  margin-bottom: 2vw;
+}
+
+.module-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.neon-button {
+  width: 20vw;
+  height: 6vw;
+  font-size: 2vw;
+  margin: 1vw;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #4200f8;
+  color: #ffffff;
+  box-shadow: 0 0 0.5vw #aef800;
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 2vw #f80036;
+}
+
+.neon-button:active {
+  transform: translateY(2px);
+}
+
+.blink {
+  animation: blinkEffect 1s infinite;
+}
+
+@keyframes blinkEffect {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .module-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .neon-button {
+    width: 80vw;
+    height: 12vw;
+    font-size: 4vw;
+    margin: 2vw;
+  }
+}
